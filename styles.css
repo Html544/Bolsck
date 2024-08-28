@@ -1,0 +1,329 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-out;
+}
+
+nav .logo {
+    width: 90px;
+    height: auto;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav .nav-links li {
+    margin: 0;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.4s;
+}
+
+nav .nav-links li a:hover {
+    color: rgb(208, 28, 40);
+}
+
+nav .login {
+    background-color: rgb(208, 28, 40);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+nav .login:hover {
+    background: transparent;
+    border: 1px solid rgb(208, 28, 40);
+    color: rgb(208, 28, 40);
+}
+
+nav .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero_section_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem;
+    gap: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero_section_content {
+    max-width: 50%;
+}
+
+.hero_section_content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.hero_section_content h1 span {
+    color: rgb(208, 28, 40);
+}
+
+.hero_section_content p {
+    text-transform: uppercase;
+    color: rgb(90, 89, 89);
+    font-weight: 600;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.call_to_action, .category {
+    all: unset;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.call_to_action {
+    background-color: rgb(208, 28, 40);
+    color: white;
+    border: 1px solid rgb(208, 28, 40);
+}
+
+.call_to_action:hover {
+    background: transparent;
+    color: rgb(208, 28, 40);
+    border: 1px solid rgb(208, 28, 40);
+}
+
+.category {
+    border: 1px solid black;
+    color: rgb(90, 89, 89);
+}
+
+.category:hover {
+    background-color: rgb(208, 28, 40);
+    color: white;
+    border: none;
+}
+
+.hero_section_content h6 {
+    font-weight: 400;
+    color: rgb(90, 89, 89);
+    margin: 1rem 0;
+}
+
+.icons img {
+    width: 2rem;
+    height: auto;
+    margin-right: 1rem;
+    transition: transform 0.3s;
+}
+
+.icons img:hover {
+    transform: translateY(-5px);
+}
+
+.hero_section_image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Shoe Models Section */
+.shoe-models {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.shoe-models h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.models-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.model {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.model img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.model h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.model p {
+    color: #555;
+}
+
+.model:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+    nav .nav-links {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav .nav-links {
+        display: none; /* Hide navigation links on small screens */
+    }
+    
+    nav .menu-toggle {
+        display: block; /* Show menu toggle button on small screens */
+    }
+    
+    .hero_section_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero_section_image {
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+
+    .models-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .model {
+        margin-bottom: 2rem;
+        width: 90%;
+    }
+}
+
+/* For very small screens (e.g., smartphones in portrait mode) */
+@media only screen and (max-width: 480px) {
+    nav .logo {
+        width: 70px;
+    }
+    
+    nav .login, nav .category, .call_to_action {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .hero_section_content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero_section_content p {
+        font-size: 0.9rem;
+    }
+
+    .icons img {
+        width: 1.5rem;
+    }
+
+    .shoe-models h2 {
+        font-size: 2rem;
+    }
+
+    .model img {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .model h3 {
+        font-size: 1.2rem;
+    }
+}
